@@ -26,12 +26,12 @@ App({
   },
   globalData:{
     userInfo:null,
-    foot_mp3: "http://m.jc258.cn/images/goals.wav",
-    bask_mp3: 'http://m.jc258.cn/images/live/sound.mp3',
-    live_api_url:"https://sec.jc258.cn/api/live/",
-    foot_bfdata: "https://sec.jc258.cn/api/livedata/bfdata",
-    foot_change: "https://sec.jc258.cn/api/livedata/change",
-    nba_tody: "https://sec.jc258.cn/api/livedata/nba_today",
-    nba_change: 'https://sec.jc258.cn/api/livedata/nba_change'
+    foot_mp3: "",
+    bask_mp3: '',
+    live_api_url:"",
+    foot_bfdata: "",
+    foot_change: "",
+    nba_tody: "",
+    nba_change: ''
   }
 })
