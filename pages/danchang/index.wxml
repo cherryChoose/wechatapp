@@ -1,0 +1,82 @@
+<!--index.wxml-->
+<!--点击触发事件-->
+<view class="swiper-tab">  
+    <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" data-games='football' bindtap="swichNav">全部</view> 
+    <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" data-games='unstart'  bindtap="swichNav">未开赛</view>  
+    <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" data-games='ongoing'  bindtap="swichNav">进行中</view>  
+    <view class="swiper-tab-list {{currentTab==3 ? 'on' : ''}}" data-current="3" data-games='completed'bindtap="swichNav">已完场</view>  
+    <view class="swiper-tab-list {{currentTab==4 ? 'on' : ''}}" data-current="4" data-games='concern'  bindtap="swichNav">关注中
+    <block wx:if="{{guanzhu > 0}}">
+      <label class = 'guanzhu_jia'>{{guanzhu}}</label>
+    </block>  
+    </view>
+</view>
+<loading hidden="{{loadingHidden}}">
+	加载中...
+</loading>
+<view class="bgcolor">
+<view class="box">
+<audio src="{{src}}" action="{{action}}"></audio>
+<view wx:for="{{matches}}" wx:for-item="match">
+    <view class="box_con">
+        <view class="left_box"  bindtap = "setNotice" data-match="{{match.match_id}}">
+            <view class='box_first' style='background:{{match.color}}'>{{match.game_name}}</view>
+            <view class='box_leave'>{{match.game_no}}</view>
+            <view class='box_leave' >{{match.game_time}}</view>
+            <block wx:if="{{matchids_hash[match.match_id] == match.match_id}}">
+                <image src="../images/ming_xing.png" bindtap = "addNotice" data-matchId="{{match.match_id}}"></image>
+            </block> 
+            <block wx:else>
+                <image src="../images/an_xing.png" bindtap = "addNotice" data-matchId="{{match.match_id}}"></image>
+            </block>   
+        </view>
+        <view class="line"></view>
+        <view class="right_box">
+            <view class="content">
+                <view class="top">
+                    <!-- 比赛状态显示控制-->     
+                    <view  class='w50-caaa' style="color:red;" wx:if ="{{(match.status == -1 || match.status >= 6)}}">已完场</view>
+                    <!--上半场、下半场字体背景色#ff4b4f并显示进行时间与闪动图片-->
+                    <view class = 'w50-caaa' style ='color:#09bb07;position:relative'   wx:elif="{{match.status == 1 || match.status ==3}}">
+                       {{match.status_text}}<image src="../images/in.gif"  class = 'gif_image'></image>
+                    </view>
+                    <!--半场背景色显示#00f-->
+                    <view class = 'w50-caaa' style ='color:#00f;'  wx:elif="{{match.status == 2}}">{{match.status_text}}</view>
+                    <!-- 其余状态显示#32b846-->
+                    <view class = 'w50-caaa' style ='color:#32b846'  wx:else>{{match.status_text}}</view>
+                    <view class='w50-caaa' wx:if="{{match.status == 0 || match.half_score == null || match.half_score == ':'}}">半场：-- </view>
+                    <view  class='w50-caaa'  wx:else>半场 : {{match.half_score}} </view>
+                </view>
+                <view class="center">
+                    <view class="w40-center-font12">
+                         <view wx:if="{{match.show_host_red_card > 0 &&  match.status != -1}}">
+                            <image  class = 'gif_card' src="../images/red{{match.show_host_red_card}}.gif"></image>
+                         </view>
+                         <view wx:if="{{match.show_host_yellow_card > 0 &&  match.status != -1}}">
+                           <image  class = 'gif_card' src="../images/yellow{{match.show_host_yellow_card}}.gif"></image>
+                         </view>                       
+                         
+                         {{match.host_name}}
+                        <text style="{{match.hand < 0 ? 'color:red;' : 'color:#00a0e9;'}}padding-left:5px;" wx:if="{{match.hand!=0}}" >({{match.hand == 0 ? "" : (match.hand)}})</text>
+                                             
+                    </view>
+                    <view class="w8-btm-vs1">
+                        <text class='font14' wx:if="{{(match.status == 0 || match.status == 2)}}">vs</text>
+                        <text style='background-color:{{finish_score_color}}' wx:else > {{ (match.finish_score == null) ?  "" :match.finish_score}} </text>
+                    </view>
+                    <view class="w40-btm-font12">
+                        <view wx:if="{{match.show_away_red_card > 0 &&  match.status != -1 }} ">
+                            <image  class = 'gif_card' src="../images/red{{match.show_away_red_card}}.gif"></image>
+                         </view>
+                         <view wx:if="{{match.show_away_yellow_card > 0 &&  match.status != -1 }}">
+                           <image  class = 'gif_card' src="../images/yellow{{match.show_away_yellow_card}}.gif"></image>
+                         </view>
+                         {{match.away_name}}
+                    </view>
+                </view>
+                </view>
+                <!--<view class="go"><image src="../images/index_30.png" alt=""></image></view>-->
+            </view>
+    </view>
+</view>
+</view>

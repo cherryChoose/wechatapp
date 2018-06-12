@@ -1,0 +1,46 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/bkball/index",
+    "pages/danchang/index",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#7f8389",
+    "selectedColor": "#09bb07",
+    "borderStyle": "#bfbfc3", 
+    "position": "bottom",
+    "backgroundColor": "#fff",
+    "list": [{
+      "pagePath": "pages/index/index",
+      "iconPath":"pages/images/foot.png",
+      "selectedIconPath":"pages/images/footse.png",
+      "text": "竞足"
+    }, 
+     {
+      "pagePath": "pages/bkball/index",
+      "iconPath":"pages/images/bask.png",
+      "selectedIconPath":"pages/images/baskse.png",
+      "text": "竞篮"
+    }, {
+      "pagePath": "pages/danchang/index",
+      "iconPath":"pages/images/beidan.png",
+      "selectedIconPath":"pages/images/beidanse.png",
+      "text": "北单"
+    }
+    ]
+  },
+ 
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+  "debug": false
+}

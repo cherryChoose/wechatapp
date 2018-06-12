@@ -1,0 +1,84 @@
+/**index.wxss**/
+.bgcolor{background-color: #efeff4;padding:8px 0;}
+page{background-color: #efeff4;}
+.swiper-tab{  
+  width: 100%;  
+  border-bottom: 1px solid #dadada;
+  text-align: center; 
+  height: 50px; 
+  line-height: 50px;
+  background-color: #fff;
+}  
+.swiper-tab-list{ 
+    font-size: 15px;  
+    display: inline-block;  
+    width: 19%;  
+    color: #353535;  
+}  
+.on{
+    display: inline-block;
+    height: 47px;
+    color: #09bb07;
+    border-bottom: solid 2px #09bb07; 
+}  
+
+.swiper-box{ 
+    display: block;
+    height: 100%; 
+    width: 100%; 
+    overflow: hidden;
+}  
+.swiper-box view{  
+    text-align: center;  
+}
+.guanzhu_jia{
+    display: block;
+    position: absolute;
+    right: 3px;
+    top: 7px;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    line-height: 16px;
+    text-align: center;
+    color: #fff;
+    font-size: 10px;
+    background: #ff7474;
+} 
+.match_page{
+    margin-left: 10px;
+}
+.match{
+    width: 50px;
+    height: 60px;
+}
+.team{
+   width: 200px;
+   height: 60px;
+}
+.flex-wrp{
+    height: 100px;
+    display:flex;
+    background-color: #FFFFFF;
+}
+.flex-item{
+    width: 100px;
+    height: 100px;
+}
+.section__title{
+    margin-bottom: 8px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.go image{
+    width:7px;height:13px;
+}
+.pd5{padding-right: 5px; }
+.gay{color: #aaa;padding-left: 5px;font-size: 14px;display:inline-block}
+.w40-line20{width:40%;line-height:20px;}
+.w50-line20{width:40%;line-height:20px;}
+.w10-line20{width:20%;line-height:20px;}
+.total{font-size: 12px;}
+.cont{padding-top:5px;}
+.zhu{color:#000;}
+.ke{color:#464646}

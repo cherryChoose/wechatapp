@@ -1,0 +1,142 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+  font-family: "Microsoft YaHei","微软雅黑";
+  font-size:12px; 
+  color:#000;
+}
+
+.box{
+  width:100%;
+  margin:0 auto;
+  background-color: #fff;
+}
+.box_con{
+  width:100%;
+  /*min-height:55px;*/
+  overflow: hidden;
+  box-sizing: border-box;
+  border-bottom:1px solid #e5e5e5;
+}
+.left_box {
+    float:left;
+    padding: 20px 0 16px;
+    /*min-height: 75px;*/
+    width: 20%;
+    position: relative;
+    line-height: 14px;    
+    background: #fff;
+    
+}
+text{ font-weight: normal;}
+image { border:none }
+.left_box .box_first{
+    font-size: 13px;
+    width: 88%;
+    text-align: center;
+    height: 18px;
+    line-height: 20px;
+    color: #fff;
+    border-radius: 3px;
+    margin: 2px auto;
+    font-weight: normal;
+}
+.left_box .box_leave {
+    font-size: 12px;
+    width: 100%;
+    text-align: center;
+    color: #999;
+    font-weight: normal;
+}
+.left_box image {
+    width: 21px;
+    height:21px;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.line{
+    float:left;
+    width:1px;
+    min-height: 75px;
+    margin:8px 0;
+    background-color: #e5e5e5;
+}
+.right_box {
+    float:left;
+    width: 79%;
+    /*min-height: 75px;*/
+    line-height: 14px;
+    background: #fff;
+    padding:8px 0 0;
+}
+
+.right_box .content{
+    float:left;
+    width:95%;
+}
+.right_box .content view{
+    overflow: hidden;
+}
+.right_box .content view view{
+    float:left;
+}
+.top{
+    font-size:12px;
+}
+.w40-caaa{
+  display: inline-block;
+  width:40%;
+  color:#888;
+  text-align: left;
+  font-size:12px;
+  text-indent: 8px;
+}
+.w50-caaa{
+  display: inline-block;
+  width:30%;
+  color:#888;
+  text-align: left;
+  font-size:12px;
+  text-indent: 8px;
+}
+.w30-caaa{
+  display: inline-block;
+  color:#888;
+  text-align: left;
+  font-size:12px;
+  text-indent: 8px;
+}
+.center{
+    padding:10px 3px 2px;
+    display: flex;
+}
+.font14{font-size: 14px;}
+.w40-btm-font12{
+  width:45%;
+  flex:45%;
+  text-align: center;
+  font-size: 14px;
+  word-spacing: -5px;
+}
+.w40-center-font12{
+ width:45%;
+  flex:45%;
+  text-align: center;
+  font-size: 14px;
+  word-spacing:-5px;
+}
+.bottom{padding:5px 3px 8px;}
+.go{
+    float:left;
+    width:5%;
+    height:56px;
+    padding-top:27px;
+}
+
